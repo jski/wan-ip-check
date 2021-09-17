@@ -2,11 +2,12 @@
 Easy tool to run as a container and notify a webhook when your WAN IP changes.
 
 # Usage
-1. Download the repo
-Then either:
+## docker-compose
+1. Setup your .env file as described below
 1. Clone this repo
-2. docker-compose up -d
-Or without cloning the repo to easily deploy to another machine:
+1. docker-compose up -d
+## docker without compose 
+1. Setup .env file
 1. docker run -d --restart unless-stopped -v ${PWD}/.env:/app/.env jski/wan-ip-check:latest
 
 # .env file
