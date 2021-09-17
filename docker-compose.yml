@@ -1,0 +1,10 @@
+version: '2'
+services:
+  wan-ip-check:
+    image: jski/wan-ip-check:latest
+    build:
+      dockerfile: Dockerfile
+      context: .
+    volumes:
+      - .env:/app/.env:ro
+    restart: unless-stopped
